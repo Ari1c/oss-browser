@@ -5,6 +5,7 @@
     "default_configuration": "Release",
     "defines": [],
     "include_dirs": [],
+<<<<<<< HEAD
     "libraries": []
   },
   "variables": {
@@ -15,17 +16,45 @@
     "host_arch": "x64",
     "icu_data_file": "icudt59l.dat",
     "icu_data_in": "..\\..\\deps/icu-small\\source/data/in\\icudt59l.dat",
+=======
+    "libraries": [],
+    "msbuild_toolset": "v141",
+    "msvs_windows_target_platform_version": "10.0.17763.0"
+  },
+  "variables": {
+    "asan": 0,
+    "build_v8_with_gn": "false",
+    "coverage": "false",
+    "debug_nghttp2": "false",
+    "enable_lto": "false",
+    "enable_pgo_generate": "false",
+    "enable_pgo_use": "false",
+    "force_dynamic_crt": 0,
+    "host_arch": "x64",
+    "icu_data_in": "..\\..\\deps/icu-small\\source/data/in\\icudt64l.dat",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "icu_endianness": "l",
     "icu_gyp_path": "tools/icu/icu-generic.gyp",
     "icu_locales": "en,root",
     "icu_path": "deps/icu-small",
     "icu_small": "true",
+<<<<<<< HEAD
     "icu_ver_major": "59",
     "node_byteorder": "little",
     "node_enable_d8": "false",
     "node_enable_v8_vtunejit": "false",
     "node_install_npm": "true",
     "node_module_version": 57,
+=======
+    "icu_ver_major": "64",
+    "nasm_version": "2.14",
+    "node_byteorder": "little",
+    "node_debug_lib": "false",
+    "node_enable_d8": "false",
+    "node_enable_v8_vtunejit": "false",
+    "node_install_npm": "true",
+    "node_module_version": 64,
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "node_no_browser_globals": "false",
     "node_prefix": "/usr/local",
     "node_release_urlbase": "https://nodejs.org/download/release/",
@@ -33,6 +62,7 @@
     "node_shared_cares": "false",
     "node_shared_http_parser": "false",
     "node_shared_libuv": "false",
+<<<<<<< HEAD
     "node_shared_openssl": "false",
     "node_shared_zlib": "false",
     "node_tag": "",
@@ -47,6 +77,26 @@
     "openssl_fips": "",
     "openssl_no_asm": 0,
     "shlib_suffix": "so.57",
+=======
+    "node_shared_nghttp2": "false",
+    "node_shared_openssl": "false",
+    "node_shared_zlib": "false",
+    "node_tag": "",
+    "node_target_type": "executable",
+    "node_use_bundled_v8": "true",
+    "node_use_dtrace": "false",
+    "node_use_etw": "true",
+    "node_use_large_pages": "false",
+    "node_use_openssl": "true",
+    "node_use_pch": "false",
+    "node_use_perfctr": "true",
+    "node_use_v8_platform": "true",
+    "node_with_ltcg": "true",
+    "node_without_node_options": "false",
+    "openssl_fips": "",
+    "openssl_no_asm": 0,
+    "shlib_suffix": "so.64",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "target_arch": "x64",
     "v8_enable_gdbjit": 0,
     "v8_enable_i18n_support": 1,
@@ -56,22 +106,42 @@
     "v8_promise_internal_field_count": 1,
     "v8_random_seed": 0,
     "v8_trace_maps": 0,
+<<<<<<< HEAD
     "v8_use_snapshot": "false",
     "want_separate_host_toolset": 0,
     "want_separate_host_toolset_mkpeephole": 0,
     "nodedir": "C:\\Users\\huaixu\\.node-gyp\\iojs-1.8.4",
     "standalone_static_library": 1,
+=======
+    "v8_typed_array_max_size_in_heap": 0,
+    "v8_use_snapshot": "true",
+    "want_separate_host_toolset": 0,
+    "nodedir": "C:\\Users\\SForv\\.node-gyp\\iojs-1.8.4",
+    "standalone_static_library": 1,
+    "msbuild_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\MSBuild.exe",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "runtime": "electron",
     "target": "1.8.4",
     "access": "",
     "allow_same_version": "",
     "also": "",
     "always_auth": "",
+<<<<<<< HEAD
     "auth_type": "legacy",
     "bin_links": "true",
     "browser": "",
     "ca": "",
     "cache": "C:\\Users\\huaixu\\AppData\\Roaming\\npm-cache",
+=======
+    "audit": "true",
+    "audit_level": "low",
+    "auth_type": "legacy",
+    "before": "",
+    "bin_links": "true",
+    "browser": "",
+    "ca": "",
+    "cache": "C:\\Users\\SForv\\AppData\\Roaming\\npm-cache",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "cache_lock_retries": "10",
     "cache_lock_stale": "60000",
     "cache_lock_wait": "10000",
@@ -84,9 +154,15 @@
     "depth": "Infinity",
     "description": "true",
     "dev": "",
+<<<<<<< HEAD
     "disturl": "https://npm.taobao.org/mirrors/node",
     "dry_run": "",
     "editor": "notepad.exe",
+=======
+    "dry_run": "",
+    "editor": "notepad.exe",
+    "email": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "engine_strict": "",
     "fetch_retries": "2",
     "fetch_retry_factor": "10",
@@ -96,8 +172,13 @@
     "git": "git",
     "git_tag_version": "true",
     "global": "",
+<<<<<<< HEAD
     "globalconfig": "C:\\Program Files\\nodejs\\etc\\npmrc",
     "globalignorefile": "C:\\Program Files\\nodejs\\etc\\npmignore",
+=======
+    "globalconfig": "C:\\Users\\SForv\\AppData\\Roaming\\npm\\etc\\npmrc",
+    "globalignorefile": "C:\\Users\\SForv\\AppData\\Roaming\\npm\\etc\\npmignore",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "global_style": "",
     "group": "",
     "ham_it_up": "",
@@ -110,7 +191,11 @@
     "init_author_name": "",
     "init_author_url": "",
     "init_license": "ISC",
+<<<<<<< HEAD
     "init_module": "C:\\Users\\huaixu\\.npm-init.js",
+=======
+    "init_module": "C:\\Users\\SForv\\.npm-init.js",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "init_version": "1.0.0",
     "json": "",
     "key": "",
@@ -121,11 +206,19 @@
     "long": "",
     "maxsockets": "50",
     "message": "%s",
+<<<<<<< HEAD
     "metrics_registry": "https://registry.npm.taobao.org/",
     "node_gyp": "C:\\Users\\huaixu\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\node_modules\\npm-lifecycle\\node_modules\\node-gyp\\bin\\node-gyp.js",
     "node_options": "",
     "node_version": "8.2.1",
     "no_proxy": "",
+=======
+    "metrics_registry": "https://registry.npmjs.org/",
+    "node_gyp": "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js",
+    "node_options": "",
+    "node_version": "10.16.0",
+    "noproxy": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "offline": "",
     "onload_script": "",
     "only": "",
@@ -136,12 +229,21 @@
     "parseable": "",
     "prefer_offline": "",
     "prefer_online": "",
+<<<<<<< HEAD
     "prefix": "C:\\Program Files\\nodejs",
+=======
+    "prefix": "C:\\Users\\SForv\\AppData\\Roaming\\npm",
+    "preid": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "production": "",
     "progress": "true",
     "read_only": "",
     "rebuild_bundle": "true",
+<<<<<<< HEAD
     "registry": "https://registry.npm.taobao.org/",
+=======
+    "registry": "https://registry.npmjs.org/",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "rollback": "true",
     "save": "true",
     "save_bundle": "",
@@ -158,8 +260,14 @@
     "searchopts": "",
     "searchstaleness": "900",
     "send_metrics": "",
+<<<<<<< HEAD
     "shell": "C:\\Windows\\system32\\cmd.exe",
     "shrinkwrap": "true",
+=======
+    "shell": "C:\\WINDOWS\\system32\\cmd.exe",
+    "shrinkwrap": "true",
+    "sign_git_commit": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "sign_git_tag": "",
     "sso_poll_frequency": "500",
     "sso_type": "oauth",
@@ -167,6 +275,7 @@
     "tag": "latest",
     "tag_version_prefix": "v",
     "timing": "",
+<<<<<<< HEAD
     "tmp": "C:\\Users\\huaixu\\AppData\\Local\\Temp",
     "umask": "0000",
     "unicode": "",
@@ -175,6 +284,17 @@
     "user": "",
     "userconfig": "C:\\Users\\huaixu\\.cnpmrc",
     "user_agent": "npm/5.8.0 node/v8.2.1 win32 x64",
+=======
+    "tmp": "C:\\Users\\SForv\\AppData\\Local\\Temp",
+    "umask": "0000",
+    "unicode": "",
+    "unsafe_perm": "true",
+    "update_notifier": "true",
+    "usage": "",
+    "user": "",
+    "userconfig": "C:\\Users\\SForv\\.npmrc",
+    "user_agent": "npm/6.9.0 node/v10.16.0 win32 x64",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "version": "",
     "versions": "",
     "viewer": "browser"

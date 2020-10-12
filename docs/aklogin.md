@@ -1,19 +1,27 @@
-# AK登录
+# AK 登录
 
 > [For English](en-aklogin.md)
+<<<<<<< HEAD
 
 ### 1. 大权限子账号AK登录
+=======
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
-* 不推荐使用主账号AK登录。推荐大权限子账号。
+### 1. 大权限子账号 AK 登录
 
-* 请到[RAM控制台](https://ram.console.aliyun.com) 创建子账号AK。
+- 不推荐使用主账号 AK 登录。推荐大权限子账号。
 
-* 该子账号要被授予 "AliyunSTSAssumeRoleAccess" 和 "AliyunRAMReadOnlyAccess" 权限，还要有*要授权目录*的访问权限。
+- 请到[RAM 控制台](https://ram.console.aliyun.com) 创建子账号 AK。
 
-* 大权限子账号授权(初级用户推荐配置)：
+- 该子账号要被授予 "AliyunSTSAssumeRoleAccess" 和 "AliyunRAMReadOnlyAccess" 权限，还要有*要授权目录*的访问权限。
 
+- 大权限子账号授权(初级用户推荐配置)：
+
+<<<<<<< HEAD
+=======
 ![](../preview/genToken1.png)
 
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 #### (1) 公共云登录样例:
 
 ![](../preview/login.png)

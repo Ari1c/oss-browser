@@ -10,6 +10,10 @@ build
 releases
 _up.sh
 _up0.sh
+<<<<<<< HEAD
+=======
+ossutil*
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 *-app.asar
 .ossutil_checkpoint
 ossutil_output

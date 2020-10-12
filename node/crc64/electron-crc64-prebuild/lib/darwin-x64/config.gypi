@@ -11,6 +11,11 @@
     "asan": 0,
     "coverage": "false",
     "debug_devtools": "node",
+<<<<<<< HEAD
+=======
+    "debug_http2": "false",
+    "debug_nghttp2": "false",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "force_dynamic_crt": 0,
     "host_arch": "x64",
     "icu_data_file": "icudt59l.dat",
@@ -59,6 +64,7 @@
     "v8_promise_internal_field_count": 1,
     "v8_random_seed": 0,
     "v8_trace_maps": 0,
+<<<<<<< HEAD
     "v8_use_snapshot": "false",
     "want_separate_host_toolset": 0,
     "want_separate_host_toolset_mkpeephole": 0,
@@ -181,5 +187,14 @@
     "onload_script": "",
     "prefix": "/usr/local",
     "link": ""
+=======
+    "v8_use_snapshot": "true",
+    "want_separate_host_toolset": 0,
+    "xcode_version": "7.0",
+    "nodedir": "/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4",
+    "standalone_static_library": 1,
+    "runtime": "electron",
+    "target": "1.8.4"
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
   }
 }

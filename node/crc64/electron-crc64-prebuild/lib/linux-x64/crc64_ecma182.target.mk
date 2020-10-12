@@ -39,7 +39,11 @@ INCS_Debug := \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/src \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/uv/include \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/v8/include \
+<<<<<<< HEAD
 	-I$(srcdir)/node_modules/_nan@2.10.0@nan
+=======
+	-I$(srcdir)/node_modules/nan
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=crc64_ecma182' \
@@ -75,7 +79,11 @@ INCS_Release := \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/src \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/uv/include \
 	-I/home/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/v8/include \
+<<<<<<< HEAD
 	-I$(srcdir)/node_modules/_nan@2.10.0@nan
+=======
+	-I$(srcdir)/node_modules/nan
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/node_crc64_ecma_182.o

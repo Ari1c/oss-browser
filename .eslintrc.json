@@ -1,12 +1,36 @@
 {
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true
-        }
-    },
-    "rules": {
-        "semi": 2
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
     }
+  },
+  "rules": {
+    "semi": 2
+  },
+  "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+  "ignorePatterns": ["static/", "vendor/", "dist/", "node_modules/", "test/"],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "angular": "readonly",
+    "moment": "readonly",
+    "CodeMirror": "readonly",
+    "Global": "readonly",
+    "openExternal": "readonly",
+    "$": "writable",
+    "Clipboard": "readonly",
+    "fs": "readonly",
+    "path": "readonly",
+    "os": "readonly",
+    "request": "readonly",
+    "custom": "writable",
+    "OSS": "readonly",
+    "ALY": "readonly"
+  }
 }

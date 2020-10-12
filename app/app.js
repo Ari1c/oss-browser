@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('web', ['ui.router',
     'ui.bootstrap',
     'ui.codemirror',
@@ -5,30 +6,44 @@ angular.module('web', ['ui.router',
     'ngSanitize',
     'templates',
     'ui.bootstrap.contextMenu'
+=======
+angular
+  .module("web", [
+    "ui.router",
+    "ui.bootstrap",
+    "ui.codemirror",
+    "pascalprecht.translate",
+    "ngSanitize",
+    "templates",
+    "ui.bootstrap.contextMenu",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
   ])
-  .config(['$stateProvider', '$urlRouterProvider', '$translateProvider',
+  .config([
+    "$stateProvider",
+    "$urlRouterProvider",
+    "$translateProvider",
     function ($stateProvider, $urlRouterProvider, $translateProvider) {
-
-      moment.locale('zh-CN');
+      moment.locale("zh-CN");
 
       $stateProvider
-        .state('files', {
-          url: '/',
-          templateUrl: 'main/files/files.html',
-          controller: 'filesCtrl'
+        .state("files", {
+          url: "/",
+          templateUrl: "main/files/files.html",
+          controller: "filesCtrl",
         })
-        .state('login', {
-          url: '/login',
-          templateUrl: 'main/auth/login.html',
-          controller: 'loginCtrl'
+        .state("login", {
+          url: "/login",
+          templateUrl: "main/auth/login.html",
+          controller: "loginCtrl",
         });
 
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise("/");
 
       //i18n
       for (var k in Global.i18n) {
         $translateProvider.translations(k, Global.i18n[k].content);
       }
+<<<<<<< HEAD
       $translateProvider.preferredLanguage('zh-CN');
 
       $translateProvider.useSanitizeValueStrategy('escapeParameters');
@@ -38,19 +53,35 @@ angular.module('web', ['ui.router',
     $rootScope.openURL = function(url){
       openExternal(url);
     };
+=======
+      $translateProvider.preferredLanguage("zh-CN");
 
-    // //i18n
-    var langMap = {};
-    var langList = [];
-    angular.forEach(Global.i18n, function (v, k) {
-      langMap[k] = v;
-      langList.push({
-        lang: k,
-        label: v.label
+      $translateProvider.useSanitizeValueStrategy("escapeParameters");
+    },
+  ])
+  .run([
+    "$rootScope",
+    "$translate",
+    "Toast",
+    function ($rootScope, $translate, Toast) {
+      $rootScope.openURL = function (url) {
+        openExternal(url);
+      };
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
+
+      // //i18n
+      var langMap = {};
+      var langList = [];
+      angular.forEach(Global.i18n, function (v, k) {
+        langMap[k] = v;
+        langList.push({
+          lang: k,
+          label: v.label,
+        });
       });
-    });
-    var lang = localStorage.getItem('lang') || langList[0].lang;
+      var lang = localStorage.getItem("lang") || langList[0].lang;
 
+<<<<<<< HEAD
     $rootScope.langSettings = {
       langList: langList,
       lang: lang,
@@ -64,6 +95,22 @@ angular.module('web', ['ui.router',
       }
     };
     $translate.use(lang);
+=======
+      $rootScope.langSettings = {
+        langList: langList,
+        lang: lang,
+        changeLanguage: function (key) {
+          console.log("changeLanguage:", key);
+          key = langMap[key] ? key : langList[0].lang;
+          $translate.use(key);
+          localStorage.setItem("lang", key);
+          $rootScope.langSettings.lang = key;
+          Toast.success($translate.instant("setup.success")); //'已经设置成功'
+        },
+      };
+      $translate.use(lang);
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
-    console.log('ready');
-  }]);
+      console.log("ready");
+    },
+  ]);

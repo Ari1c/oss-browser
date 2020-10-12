@@ -45,10 +45,20 @@ CFLAGS_OBJC_Debug :=
 CFLAGS_OBJCC_Debug :=
 
 INCS_Debug := \
+<<<<<<< HEAD
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/include/node \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/src \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/uv/include \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/v8/include
+=======
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/include/node \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/src \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/openssl/config \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/openssl/openssl/include \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/uv/include \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/zlib \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/v8/include
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=crc64_ecma182_base' \
@@ -90,10 +100,20 @@ CFLAGS_OBJC_Release :=
 CFLAGS_OBJCC_Release :=
 
 INCS_Release := \
+<<<<<<< HEAD
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/include/node \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/src \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/uv/include \
 	-I/Users/huaixu/.electron-gyp/.node-gyp/iojs-1.8.4/deps/v8/include
+=======
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/include/node \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/src \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/openssl/config \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/openssl/openssl/include \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/uv/include \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/zlib \
+	-I/Users/luozhang/.electron-gyp/Library/Caches/node-gyp/iojs-1.8.4/deps/v8/include
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
 OBJS := \
 	$(obj).target/$(TARGET)/src/crc64_ecma_182.o

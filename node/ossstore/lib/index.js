@@ -1,18 +1,26 @@
+<<<<<<< HEAD
 'use strict';
 var ALYD = require('aliyun-sdk');
 require('events').EventEmitter.prototype._maxListeners = 1000;
 // var TIMEOUT = 30000; //30秒
 var TIMEOUT = parseInt(localStorage.getItem('connectTimeout') || 60000); //30秒
 console.log("TIMEOUT: " + TIMEOUT)
+=======
+"use strict";
+var ALYD = require("aliyun-sdk");
+var OSS = require("ali-oss");
+require("events").EventEmitter.prototype._maxListeners = 1000;
+// var TIMEOUT = 30000; //30秒
+var TIMEOUT = parseInt(localStorage.getItem("connectTimeout") || 60000); //30秒
+console.log("TIMEOUT: " + TIMEOUT);
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 //fix
 ALYD.util.isBrowser = function () {
   return false;
 };
 
-
-var UploadJob = require('./upload-job');
-var DownloadJob = require('./download-job');
-
+var UploadJob = require("./upload-job");
+var DownloadJob = require("./download-job");
 
 /**
  * OssStore
@@ -27,29 +35,33 @@ var DownloadJob = require('./download-job');
 
 function OssStore(config) {
   if (!config) {
-    console.log('需要 config');
+    console.log("需要 config");
     return;
   }
   this._config = {};
   Object.assign(this._config, config);
 
   if (!this._config.aliyunCredential && !this._config.stsToken) {
-    console.log('需要 stsToken');
+    console.log("需要 stsToken");
     return;
   }
 
   if (!this._config.endpoint) {
-    console.log('需要 endpoint');
+    console.log("需要 endpoint");
     return;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
   if (this._config.stsToken) {
     this.oss = new ALYD.OSS({
       accessKeyId: this._config.stsToken.Credentials.AccessKeyId,
       secretAccessKey: this._config.stsToken.Credentials.AccessKeySecret,
       securityToken: this._config.stsToken.Credentials.SecurityToken,
       endpoint: this._config.endpoint,
+<<<<<<< HEAD
       apiVersion: '2013-10-15',
       maxRetries: 0,
       httpOptions: {
@@ -57,13 +69,33 @@ function OssStore(config) {
       },
       cname: this._config.cname,
       isRequestPayer: localStorage.getItem("show-request-pay") === 'YES' ? true : false
+=======
+      apiVersion: "2013-10-15",
+      maxRetries: 0,
+      httpOptions: {
+        timeout: TIMEOUT,
+      },
+      cname: this._config.cname,
+      isRequestPayer:
+        localStorage.getItem("show-request-pay") === "YES" ? true : false,
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     });
-  }
-  else {
+    this.aliOSS = new OSS({
+      accessKeyId: this._config.stsToken.Credentials.AccessKeyId,
+      accessKeySecret: this._config.stsToken.Credentials.AccessKeySecret,
+      stsToken: this._config.stsToken.Credentials.SecurityToken,
+      endpoint: this._config.endpoint,
+      cname: this._config.cname,
+      timeout: TIMEOUT,
+      isRequestPay:
+        localStorage.getItem("show-request-pay") === "YES" ? true : false,
+    });
+  } else {
     this.oss = new ALYD.OSS({
       accessKeyId: this._config.aliyunCredential.accessKeyId,
       secretAccessKey: this._config.aliyunCredential.secretAccessKey,
       endpoint: this._config.endpoint,
+<<<<<<< HEAD
       apiVersion: '2013-10-15',
       maxRetries: 0,
       httpOptions: {
@@ -71,17 +103,36 @@ function OssStore(config) {
       },
       cname: this._config.cname,
       isRequestPayer: localStorage.getItem("show-request-pay") === 'YES' ? true : false
+=======
+      apiVersion: "2013-10-15",
+      maxRetries: 0,
+      httpOptions: {
+        timeout: TIMEOUT,
+      },
+      cname: this._config.cname,
+      isRequestPayer:
+        localStorage.getItem("show-request-pay") === "YES" ? true : false,
+    });
+    this.aliOSS = new OSS({
+      accessKeyId: this._config.aliyunCredential.accessKeyId,
+      accessKeySecret: this._config.aliyunCredential.secretAccessKey,
+      endpoint: this._config.endpoint,
+      cname: this._config.cname,
+      timeout: TIMEOUT,
+      isRequestPay:
+        localStorage.getItem("show-request-pay") === "YES" ? true : false,
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     });
   }
 
-  var arr = this._config.endpoint.split('://');
+  var arr = this._config.endpoint.split("://");
   if (arr.length < 2) {
-    console.log('endpoint 格式错误');
+    console.log("endpoint 格式错误");
     return;
   }
   this._config.endpoint = {
     protocol: arr[0],
-    host: arr[1]
+    host: arr[1],
   };
 }
 
@@ -93,6 +144,7 @@ OssStore.prototype.setStsToken = function (stsToken) {
     secretAccessKey: this._config.stsToken.Credentials.AccessKeySecret,
     securityToken: this._config.stsToken.Credentials.SecurityToken,
     endpoint: this._config.endpoint,
+<<<<<<< HEAD
     apiVersion: '2013-10-15',
     maxRetries: 0,
     httpOptions: {
@@ -100,9 +152,18 @@ OssStore.prototype.setStsToken = function (stsToken) {
     },
     cname: this._config.cname,
     isRequestPayer: localStorage.getItem("show-request-pay") === 'YES' ? true : false
+=======
+    apiVersion: "2013-10-15",
+    maxRetries: 0,
+    httpOptions: {
+      timeout: TIMEOUT,
+    },
+    cname: this._config.cname,
+    isRequestPayer:
+      localStorage.getItem("show-request-pay") === "YES" ? true : false,
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
   });
 };
-
 
 /**
  *
@@ -130,7 +191,6 @@ OssStore.prototype.setStsToken = function (stsToken) {
  *    options.enableCrc64 {boolean}
  */
 OssStore.prototype.createUploadJob = function createUploadJob(options) {
-
   var self = this;
 
   var job = new UploadJob(self.oss, options);
@@ -138,7 +198,6 @@ OssStore.prototype.createUploadJob = function createUploadJob(options) {
   //默认是 waiting 状态
   return job;
 };
-
 
 /**
  *
@@ -167,15 +226,13 @@ OssStore.prototype.createUploadJob = function createUploadJob(options) {
  *    options.enableCrc64 {boolean}
  */
 OssStore.prototype.createDownloadJob = function createDownloadJob(options) {
-
   var self = this;
 
-  var job = new DownloadJob(self.oss, options);
+  var job = new DownloadJob(self.oss, options, self.aliOSS);
 
   //默认是 waiting 状态
 
   return job;
 };
-
 
 module.exports = OssStore;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 angular.module('web')
   .factory('Auth', ['$q','$rootScope', '$location','$translate', 'ossSvs2', 'AuthInfo', 'Const', 'Cipher',
     function($q, $rootScope, $location, $translate, ossSvs2, AuthInfo, Const, Cipher) {
@@ -19,22 +20,77 @@ angular.module('web')
 
 
         $rootScope.internalSupported = data.eptpl ? data.eptpl.indexOf('-internal')!=-1 : false;
+=======
+angular.module("web").factory("Auth", [
+  "$q",
+  "$rootScope",
+  "$location",
+  "$translate",
+  "ossSvs2",
+  "AuthInfo",
+  "Const",
+  "Cipher",
+  function (
+    $q,
+    $rootScope,
+    $location,
+    $translate,
+    ossSvs2,
+    AuthInfo,
+    Const,
+    Cipher
+  ) {
+    var T = $translate.instant;
+    return {
+      login: login,
+      logout: logout,
+    };
 
-        if (data.osspath) {
+    function login(data) {
+      if (!data.osspath) delete data.region;
 
-          var info = ossSvs2.parseOSSPath(data.osspath);
-          data.bucket = info.bucket;
+      var df = $q.defer();
+      data.httpOptions = { timeout: 15000 };
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
+      if (data.id.indexOf("STS.") != 0) {
+        delete data.stoken;
+      }
+
+      $rootScope.internalSupported = data.eptpl
+        ? data.eptpl.indexOf("-internal") != -1
+        : false;
+
+<<<<<<< HEAD
           ossSvs2.getClient(data).listObjects({Bucket: info.bucket, Prefix: info.key, Marker:'',MaxKeys:1, Delimiter:'/'}, function(err, result){
+=======
+      if (data.osspath) {
+        var info = ossSvs2.parseOSSPath(data.osspath);
+        data.bucket = info.bucket;
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
 
-            if(err){
+        ossSvs2.getClient(data).listObjects(
+          {
+            Bucket: info.bucket,
+            Prefix: info.key,
+            Marker: "",
+            MaxKeys: 1,
+            Delimiter: "/",
+          },
+          function (err, result) {
+            if (err) {
               df.reject(err);
-            }
-            else if(result.RequestId && result.CommonPrefixes){
+            } else if (result.RequestId && result.CommonPrefixes) {
               //登录成功
               AuthInfo.save(data);
               df.resolve();
+            } else {
+              df.reject({
+                code: "Error",
+                message: T("login.endpoint.error"),
+              }); //'请确定Endpoint是否正确'
             }
+<<<<<<< HEAD
             else{
               df.reject({code:'Error',message:T('login.endpoint.error')}); //'请确定Endpoint是否正确'
             }
@@ -59,18 +115,38 @@ angular.module('web')
               df.resolve();
             }else{
               df.reject({code:'Error',message:T('login.endpoint.error')});
+=======
+          }
+        );
+      } else {
+        ossSvs2.getClient(data).listBuckets(function (err, result) {
+          if (err) {
+            if (err.code == "AccessDeniedError") {
+              //登录成功
+              AuthInfo.save(data);
+              df.resolve();
+            } else {
+              //失败
+              df.reject(err);
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
             }
-          });
-        }
-        return df.promise;
+          } else if (result.RequestId && result.Buckets) {
+            //登录成功
+            AuthInfo.save(data);
+            df.resolve();
+          } else {
+            df.reject({ code: "Error", message: T("login.endpoint.error") });
+          }
+        });
       }
-
-      function logout() {
-        var df = $q.defer();
-        AuthInfo.remove();
-        df.resolve();
-        return df.promise;
-      }
-
+      return df.promise;
     }
-  ]);
+
+    function logout() {
+      var df = $q.defer();
+      AuthInfo.remove();
+      df.resolve();
+      return df.promise;
+    }
+  },
+]);

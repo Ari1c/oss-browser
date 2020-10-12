@@ -5,22 +5,41 @@
     "default_configuration": "Release",
     "defines": [],
     "include_dirs": [],
+<<<<<<< HEAD
     "libraries": []
+=======
+    "libraries": [],
+    "msbuild_toolset": "v141",
+    "msvs_windows_target_platform_version": "10.0.17763.0"
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
   },
   "variables": {
     "asan": 0,
     "coverage": "false",
     "debug_devtools": "node",
+<<<<<<< HEAD
     "force_dynamic_crt": 0,
     "host_arch": "x64",
     "icu_data_file": "icudt59l.dat",
     "icu_data_in": "..\\..\\deps/icu-small\\source/data/in\\icudt59l.dat",
+=======
+    "debug_http2": "false",
+    "debug_nghttp2": "false",
+    "force_dynamic_crt": 0,
+    "host_arch": "x64",
+    "icu_data_file": "icudt60l.dat",
+    "icu_data_in": "..\\..\\deps/icu-small\\source/data/in\\icudt60l.dat",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "icu_endianness": "l",
     "icu_gyp_path": "tools/icu/icu-generic.gyp",
     "icu_locales": "en,root",
     "icu_path": "deps/icu-small",
     "icu_small": "true",
+<<<<<<< HEAD
     "icu_ver_major": "59",
+=======
+    "icu_ver_major": "60",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "node_byteorder": "little",
     "node_enable_d8": "false",
     "node_enable_v8_vtunejit": "false",
@@ -33,9 +52,17 @@
     "node_shared_cares": "false",
     "node_shared_http_parser": "false",
     "node_shared_libuv": "false",
+<<<<<<< HEAD
     "node_shared_openssl": "false",
     "node_shared_zlib": "false",
     "node_tag": "",
+=======
+    "node_shared_nghttp2": "false",
+    "node_shared_openssl": "false",
+    "node_shared_zlib": "false",
+    "node_tag": "",
+    "node_target_type": "executable",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "node_use_bundled_v8": "true",
     "node_use_dtrace": "false",
     "node_use_etw": "true",
@@ -56,22 +83,39 @@
     "v8_promise_internal_field_count": 1,
     "v8_random_seed": 0,
     "v8_trace_maps": 0,
+<<<<<<< HEAD
     "v8_use_snapshot": "false",
     "want_separate_host_toolset": 0,
     "want_separate_host_toolset_mkpeephole": 1,
     "nodedir": "C:\\Users\\duanhongchun\\.node-gyp\\iojs-1.8.4",
     "standalone_static_library": 1,
+=======
+    "v8_use_snapshot": "true",
+    "want_separate_host_toolset": 1,
+    "nodedir": "C:\\Users\\luozhang002\\.node-gyp\\iojs-1.8.4",
+    "standalone_static_library": 1,
+    "msbuild_path": "C:\\Program Files\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\MSBuild.exe",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "runtime": "electron",
     "target": "1.8.4",
     "access": "",
     "allow_same_version": "",
     "also": "",
     "always_auth": "",
+<<<<<<< HEAD
+=======
+    "audit": "true",
+    "audit_level": "low",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "auth_type": "legacy",
     "bin_links": "true",
     "browser": "",
     "ca": "",
+<<<<<<< HEAD
     "cache": "C:\\Users\\duanhongchun\\AppData\\Roaming\\npm-cache",
+=======
+    "cache": "C:\\Users\\luozhang002\\AppData\\Roaming\\npm-cache",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "cache_lock_retries": "10",
     "cache_lock_stale": "60000",
     "cache_lock_wait": "10000",
@@ -84,7 +128,10 @@
     "depth": "Infinity",
     "description": "true",
     "dev": "",
+<<<<<<< HEAD
     "disturl": "https://npm.taobao.org/mirrors/node",
+=======
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "dry_run": "",
     "editor": "notepad.exe",
     "engine_strict": "",
@@ -96,8 +143,13 @@
     "git": "git",
     "git_tag_version": "true",
     "global": "",
+<<<<<<< HEAD
     "globalconfig": "C:\\Program Files\\nodejs\\etc\\npmrc",
     "globalignorefile": "C:\\Program Files\\nodejs\\etc\\npmignore",
+=======
+    "globalconfig": "C:\\Users\\luozhang002\\AppData\\Roaming\\npm\\etc\\npmrc",
+    "globalignorefile": "C:\\Users\\luozhang002\\AppData\\Roaming\\npm\\etc\\npmignore",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "global_style": "",
     "group": "",
     "ham_it_up": "",
@@ -110,7 +162,11 @@
     "init_author_name": "",
     "init_author_url": "",
     "init_license": "ISC",
+<<<<<<< HEAD
     "init_module": "C:\\Users\\duanhongchun\\.npm-init.js",
+=======
+    "init_module": "C:\\Users\\luozhang002\\.npm-init.js",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "init_version": "1.0.0",
     "json": "",
     "key": "",
@@ -121,11 +177,19 @@
     "long": "",
     "maxsockets": "50",
     "message": "%s",
+<<<<<<< HEAD
     "metrics_registry": "https://registry.npm.taobao.org/",
     "node_gyp": "C:\\Users\\duanhongchun\\AppData\\Roaming\\npm\\node_modules\\cnpm\\node_modules\\npm\\node_modules\\npm-lifecycle\\node_modules\\node-gyp\\bin\\node-gyp.js",
     "node_options": "",
     "node_version": "8.2.1",
     "no_proxy": "",
+=======
+    "metrics_registry": "https://registry.npmjs.org/",
+    "node_gyp": "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js",
+    "node_options": "",
+    "node_version": "8.16.1",
+    "noproxy": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "offline": "",
     "onload_script": "",
     "only": "",
@@ -136,12 +200,21 @@
     "parseable": "",
     "prefer_offline": "",
     "prefer_online": "",
+<<<<<<< HEAD
     "prefix": "C:\\Program Files\\nodejs",
+=======
+    "prefix": "C:\\Users\\luozhang002\\AppData\\Roaming\\npm",
+    "preid": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "production": "",
     "progress": "true",
     "read_only": "",
     "rebuild_bundle": "true",
+<<<<<<< HEAD
     "registry": "https://registry.npm.taobao.org/",
+=======
+    "registry": "https://registry.npmjs.org/",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "rollback": "true",
     "save": "true",
     "save_bundle": "",
@@ -160,6 +233,10 @@
     "send_metrics": "",
     "shell": "C:\\Windows\\system32\\cmd.exe",
     "shrinkwrap": "true",
+<<<<<<< HEAD
+=======
+    "sign_git_commit": "",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "sign_git_tag": "",
     "sso_poll_frequency": "500",
     "sso_type": "oauth",
@@ -167,6 +244,7 @@
     "tag": "latest",
     "tag_version_prefix": "v",
     "timing": "",
+<<<<<<< HEAD
     "tmp": "C:\\Users\\DUANHO~1\\AppData\\Local\\Temp",
     "umask": "0000",
     "unicode": "",
@@ -175,6 +253,17 @@
     "user": "",
     "userconfig": "C:\\Users\\duanhongchun\\.cnpmrc",
     "user_agent": "npm/5.8.0 node/v8.2.1 win32 ia32",
+=======
+    "tmp": "C:\\Users\\LUOZHA~1\\AppData\\Local\\Temp",
+    "umask": "0000",
+    "unicode": "",
+    "unsafe_perm": "true",
+    "update_notifier": "true",
+    "usage": "",
+    "user": "",
+    "userconfig": "C:\\Users\\luozhang002\\.npmrc",
+    "user_agent": "npm/6.4.1 node/v8.16.1 win32 ia32",
+>>>>>>> a3c34812de130a3964bc82c152cfbffc0e61eba5
     "version": "",
     "versions": "",
     "viewer": "browser"
